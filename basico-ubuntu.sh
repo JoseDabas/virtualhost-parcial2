@@ -23,12 +23,12 @@ sdk install java 21.0.3-tem
 sudo service apache2 start
 
 # Clonando el repositorio.
-git clone https://github.com/JoseDabas/virtualhost-proxyreverso.git
+git clone https://github.com/JoseDabas/virtualhost-parcial2.git
 
 # Copiando los archivos de configuración en la ruta indicada.
-sudo cp ~/virtualhost-proxyreverso/configuraciones/virtualhost.conf /etc/apache2/sites-available/
-sudo cp ~/virtualhost-proxyreverso/configuraciones/seguro.conf /etc/apache2/sites-available/
-sudo cp ~/virtualhost-proxyreverso/configuraciones/proxyreverso.conf /etc/apache2/sites-available/
+sudo cp ~/virtualhost-parcial2/configuraciones/virtualhost.conf /etc/apache2/sites-available/
+sudo cp ~/virtualhost-parcial2/configuraciones/seguro.conf /etc/apache2/sites-available/
+sudo cp ~/virtualhost-parcial2/configuraciones/proxyreverso.conf /etc/apache2/sites-available/
 
 # Creando las estructuras de los archivos.
 sudo mkdir -p /var/www/html/app1 /var/www/html/app2
