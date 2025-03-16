@@ -23,7 +23,7 @@ sdk install java 21.0.3-tem
 sudo service apache2 start
 
 # Clonando el repositorio.
-git clone https://github.com/vacax/virtualhost-proxyreverso
+git clone https://github.com/JoseDabas/virtualhost-proxyreverso.git
 
 # Copiando los archivos de configuración en la ruta indicada.
 sudo cp ~/virtualhost-proxyreverso/configuraciones/virtualhost.conf /etc/apache2/sites-available/
@@ -39,11 +39,13 @@ printf "<h1>Sitio Aplicacion #2</h1>" | sudo tee /var/www/html/app2/index.html
 
 # Clonando el proyecto ORM y moviendo a la carpeta descargada.
 cd ~/
-git clone https://github.com/vacax/orm-jpa
-cd orm-jpa
+git clone https://github.com/JoseDabas/Parcial2-ProgramacionWeb.git
+cd Parcial2-ProgramacionWeb
 
 # Ejecutando la creación de fatjar
+chmod +x gradlew
 ./gradlew shadowjar
 
 # Subiendo la aplicación puerto por defecto.
-java -jar ~/orm-jpa/build/libs/app.jar > ~/orm-jpa/build/libs/salida.txt 2> ~/orm-jpa/build/libs/error.txt &
+mkdir -p ~/Parcial2-ProgramacionWeb/build/libs/
+java -jar ~/Parcial2-ProgramacionWeb/build/libs/app.jar > ~/Parcial2-ProgramacionWeb/build/libs/salida.txt 2> ~/Parcial2-ProgramacionWeb/build/libs/error.txt &
